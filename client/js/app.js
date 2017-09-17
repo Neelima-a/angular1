@@ -1,5 +1,5 @@
 var app=angular.module("myApp",[ 'ui.router']);
-		app.config(function($stateProvider,$urlRouterProvider) {
+		app.config(function($stateProvider,$urlRouterProvider,$locationProvider, $provide, $stateProvider) {
             $urlRouterProvider.otherwise("",'/home');
 				$stateProvider
 					.state('home', {
@@ -11,5 +11,5 @@ var app=angular.module("myApp",[ 'ui.router']);
                         url: '/about',
 						templateUrl: 'views/about.html'
                     })
-
+            $locationProvider.html5Mode(true);
 		});
