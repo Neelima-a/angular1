@@ -12,6 +12,8 @@ app.use(express.static('client',{index:'views/index.html'}));
 var router = require('./server/routes/router.js');
 app.use('/api',router); 
 
-app.listen(config.port);
+app.listen(config.port,function(){
+	console.log("----> Server running")
+});
 
 

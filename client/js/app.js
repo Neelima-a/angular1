@@ -1,6 +1,6 @@
 var app=angular.module("myApp",[ 'ui.router']);
-		app.config(function($stateProvider,$urlRouterProvider,$locationProvider, $provide, $stateProvider) {
-            $urlRouterProvider.otherwise("",'/home');
+		app.config(function($stateProvider,$urlRouterProvider,$locationProvider) {
+            $urlRouterProvider.otherwise('/home');
 				$stateProvider
 					.state('home', {
 						url: '/home',
@@ -12,4 +12,4 @@ var app=angular.module("myApp",[ 'ui.router']);
 						templateUrl: 'views/about.html'
                     })
             $locationProvider.html5Mode(true);
-		});
+});
