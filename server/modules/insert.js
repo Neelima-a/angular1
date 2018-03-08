@@ -1,6 +1,6 @@
 var studentColl= require('../models/sample-schema.js').students;
 function insertData(a,callback){
-	var	retObj={};
+	var retObj={};
 	studentColl.create(a,function(err,docs){
 		if(err){
 			retObj.status=false;
